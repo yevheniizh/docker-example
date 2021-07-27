@@ -1,0 +1,32 @@
+{
+  "name": "docker-example",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro",
+    "dev": "micro-dev"
+  },
+  "dependencies": {
+    "micro": "^9.3.4",
+    "micro-redirect": "^1.0.0",
+    "microrouter": "^3.1.3",
+    "pg": "^7.11.0"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zzzhyrov/docker-example.git"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "Yevhenii Zhyrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zzzhyrov/docker-example/issues"
+  },
+  "homepage": "https://github.com/zzzhyrov/docker-example#readme",
+  "description": ""
+}
