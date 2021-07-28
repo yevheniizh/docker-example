@@ -8,7 +8,7 @@ const client = new Client({
   user: 'postgres',
   host: process.env.POSTGRES_HOST || 'localhost',
   port: 5432,
-  database: 'docker_test',
+  database: 'docker-example',
   password: '123',
 });
 
