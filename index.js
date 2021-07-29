@@ -6,7 +6,7 @@ const redirect = require('micro-redirect');
 
 const client = new Client({
   user: 'postgres',
-  host: process.env.POSTGRES_HOST || 'localhost',
+  host: 'postgres',
   port: 5432,
   database: 'docker-example',
   password: '123',
