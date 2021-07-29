@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "start": "micro -l tcp://0.0.0.0:3001",
+    "start": "micro",
     "dev": "micro-dev"
   },
   "dependencies": {
