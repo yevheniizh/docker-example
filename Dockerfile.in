@@ -8,6 +8,6 @@ RUN apk add git \
         
 WORKDIR /docker-example/
 
-EXPOSE 3000
+EXPOSE 3001
 
 CMD yarn start

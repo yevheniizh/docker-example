@@ -6,7 +6,9 @@ const redirect = require('micro-redirect');
 
 const client = new Client({
   user: 'postgres',
-  host: 'postgres',
+  // host: 'localhost',
+  // host: 'postgres',
+  host: 'host.docker.internal',
   port: 5432,
   database: 'docker-example',
   password: '123',
@@ -35,6 +37,14 @@ const add = async (req, res) => {
 
 module.exports = router(get('/', index), get('/add', add));
 
+console.log('query', client.query(
+  "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE  table_schema = 'public' AND table_name = 'messages')",
+  (err, result) => {
+    if (!result.rows[0].exists) {
+      client.query('create table messages (text varchar(255));');
+    }
+  }
+));
 client.query(
   "SELECT EXISTS (SELECT 1 FROM information_schema.tables WHERE  table_schema = 'public' AND table_name = 'messages')",
   (err, result) => {
@@ -43,3 +53,4 @@ client.query(
     }
   }
 );
+
